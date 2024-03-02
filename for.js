@@ -38,7 +38,7 @@ function updateSummary() {
         total += 10;
     });
 
-    totalElement.innerText = total;
+    totalElement.innerText = total.toLocaleString('pt-BR', {style: 'currency' , currency: 'BRL'});
 
     seatNumber.innerHTML = n;
 }
@@ -47,7 +47,7 @@ function updateSummary() {
 function confirm() {
     const selectedSeats = document.querySelectorAll('.seat.selected');
     const totalSeats = selectedSeats.length;
-    alert(`Compra realizada!\nTotal: R$ ${total} você comprou um total de ${totalSeats} cadeiras`);
+    alert(`Você realizou um total de ${totalSeats} cadeiras, que resultou no total de ${total.toLocaleString('pt-BR', {style: 'currency' , currency: 'BRL'})}`);
 }
 
 // Limpa a seleção de cadeiras
@@ -58,3 +58,5 @@ function clearSelection() {
     });
     updateSummary();
 }
+
+
