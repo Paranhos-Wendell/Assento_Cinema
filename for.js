@@ -47,7 +47,7 @@ function updateSummary() {
 function confirm() {
     const selectedSeats = document.querySelectorAll('.seat.selected');
     const totalSeats = selectedSeats.length;
-    alert(`Você realizou um total de ${totalSeats} cadeiras, que resultou no total de ${total.toLocaleString('pt-BR', {style: 'currency' , currency: 'BRL'})}`);
+    alert(`Você comprou um total de ${totalSeats} cadeiras, que resultou no total de ${total.toLocaleString('pt-BR', {style: 'currency' , currency: 'BRL'})}`);
 }
 
 // Limpa a seleção de cadeiras
